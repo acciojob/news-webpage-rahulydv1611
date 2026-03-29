@@ -1,3 +1,4 @@
+/* Body */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -12,28 +13,27 @@ body {
   padding: 20px;
 }
 
-/* Container */
+/* Main layout */
 .container {
   display: flex;
   justify-content: space-around;
-  align-items: stretch;   /* ✅ THIS FIXES HEIGHT */
+  align-items: flex-start;   /* ✅ Important (no equal height) */
   gap: 20px;
   margin: 20px;
 }
 
-/* Common card style */
+/* Common card styling */
 .latest-news-section,
 .main-article,
 .pictorial-news-section {
   background-color: white;
   padding: 20px;
   border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  height: auto;              /* ✅ content-based height */
+  box-sizing: border-box;
 }
 
-/* Individual widths */
+/* Section widths */
 .latest-news-section {
   width: 25%;
 }
@@ -48,11 +48,21 @@ body {
   text-align: center;
 }
 
+/* Headings */
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+/* List styling */
+ul {
+  padding-left: 20px;
+}
+
 /* Images */
 .pictorial-news-section img {
   width: 100%;
   height: 120px;
   object-fit: cover;
   margin: 10px 0;
-  border-radius: 8px;
+  border-radius: 10px;
 }
