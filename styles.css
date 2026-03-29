@@ -1,5 +1,3 @@
-/*  your css code here. If applicable */
-/* Body */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -14,42 +12,47 @@ body {
   padding: 20px;
 }
 
-/* Layout */
+/* Container */
 .container {
   display: flex;
   justify-content: space-around;
+  align-items: stretch;   /* ✅ THIS FIXES HEIGHT */
+  gap: 20px;
   margin: 20px;
 }
 
-/* Latest News */
-.latest-news-section {
-  background-color: white;
-  padding: 20px;
-  width: 25%;
-  border-radius: 10px;
-}
-
-/* Main Article */
-.main-article {
-  background-color: white;
-  padding: 20px;
-  width: 40%;
-  border-radius: 10px;
-  text-align: center;
-}
-
-/* Pictorial News */
+/* Common card style */
+.latest-news-section,
+.main-article,
 .pictorial-news-section {
   background-color: white;
   padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Individual widths */
+.latest-news-section {
+  width: 25%;
+}
+
+.main-article {
+  width: 40%;
+  text-align: center;
+}
+
+.pictorial-news-section {
   width: 25%;
   text-align: center;
-  border-radius: 10px;
 }
 
 /* Images */
 .pictorial-news-section img {
   width: 100%;
+  height: 120px;
+  object-fit: cover;
   margin: 10px 0;
   border-radius: 8px;
 }
